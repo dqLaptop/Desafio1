@@ -1,5 +1,6 @@
 import './styles.css';
-import { Panel } from './Classes/index';
+import { Tarea, ListaTarea, Panel } from './Classes/index';
+import{ Componentes } from './js/componentes';
 
 export const PanelPendiente=new Panel(1);
 export const PanelProgreso=new Panel(2);
