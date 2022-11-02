@@ -1,0 +1,33 @@
+@mixin botones($tema) {
+
+    #cambio {
+        margin-top: 20px;
+        color: map.get($temaOscuro, "colorTerciario");
+        background-color: map.get($temaOscuro, "colorCuadruple");
+    }
+
+    #cambio:hover {
+        color: map.get($temaOscuro, "colorTerciario");
+        background-color: map.get($temaOscuro, "colorPrimario");
+    }
+
+    div button {
+        color: map.get($tema, "colorTerciario");
+        background-color: map.get($tema, "colorSecundario");
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+    div button:hover {
+        color: map.get($tema, "colorTerciario");
+        background-color: map.get($tema, "colorPrimario");
+    }
+
+    #modificar,
+    #addSub,
+    #deleteSub,
+    #aceptar,
+    #cancelar {
+        margin-top: 50px;
+    }
+}
