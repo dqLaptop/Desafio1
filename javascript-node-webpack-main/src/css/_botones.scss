@@ -31,6 +31,7 @@
         margin-top: 50px;
     }
 }
+
 @mixin botonesClaro($tema) {
     #cambio {
         color: map.get($tema, "colorPrimario");

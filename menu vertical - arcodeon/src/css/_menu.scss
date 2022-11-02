@@ -1,0 +1,38 @@
+@mixin acordeon($tema) {
+    div.acordeon {
+        div {
+            display: block;
+            width: 100%;
+
+            h3 {
+                font: 10pt Arial;
+                width: 100%;
+                padding-left: 1em;
+                background: map.get($tema,"colorCuadruple");
+                height: 3em;
+                text-transform: uppercase;
+                line-height: 3em;
+                color: map.get($tema, "colorTerciario");
+                margin: 0;
+
+                &:hover {
+                    background-color: map.get($tema, "colorPrimario");
+                }
+
+                span {
+                    float: right;
+                    padding-right: 2em;
+                }
+            }
+
+            article {
+                background-color: map.get($tema, "colorCuadruple");
+                color: map.get($tema, "colorPrimario");
+                border: 2px solid map.get($tema, "colorPrimario");
+                display: none;
+
+            }
+        }
+    }
+}
+

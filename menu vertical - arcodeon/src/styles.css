@@ -922,7 +922,309 @@ on small devices, paste the mobile query code up in the buttons section and styl
 there.
 */
 /* Larger than mobile */
+@media (min-width: 400px) {
+  .container {
+    width: 80%;
+  }
+  /* .column,
+   .columns {
+    margin-left: 4%; }*/
+  .column:first-child,
+.columns:first-child {
+    margin-left: 0;
+  }
+  .p-one.column,
+.p-one.columns {
+    width: 4.6666666667%;
+  }
+  .p-two.columns {
+    width: 13.3333333333%;
+  }
+  .p-three.columns {
+    width: 22%;
+  }
+  .p-four.columns {
+    width: 30.6666666667%;
+  }
+  .p-five.columns {
+    width: 39.3333333333%;
+  }
+  .p-six.columns {
+    width: 48%;
+  }
+  .p-seven.columns {
+    width: 56.6666666667%;
+  }
+  .p-eight.columns {
+    width: 65.3333333333%;
+  }
+  .p-nine.columns {
+    width: 74%;
+  }
+  .p-ten.columns {
+    width: 82.6666666667%;
+  }
+  .p-eleven.columns {
+    width: 91.3333333333%;
+  }
+  .p-twelve.columns {
+    width: 100%;
+    margin-left: 0;
+  }
+  .p-one-third.column {
+    width: 30.6666666667%;
+  }
+  .p-two-thirds.column {
+    width: 65.3333333333%;
+  }
+  .p-one-half.column {
+    width: 48%;
+  }
+  /* Offsets */
+  .p-offset-by-one.column,
+.p-offset-by-one.columns {
+    margin-left: 8.6666666667%;
+  }
+  .p-offset-by-two.column,
+.p-offset-by-two.columns {
+    margin-left: 17.3333333333%;
+  }
+  .p-offset-by-three.column,
+.p-offset-by-three.columns {
+    margin-left: 26%;
+  }
+  .p-offset-by-four.column,
+.p-offset-by-four.columns {
+    margin-left: 34.6666666667%;
+  }
+  .p-offset-by-five.column,
+.p-offset-by-five.columns {
+    margin-left: 43.3333333333%;
+  }
+  .p-offset-by-six.column,
+.p-offset-by-six.columns {
+    margin-left: 52%;
+  }
+  .p-offset-by-seven.column,
+.p-offset-by-seven.columns {
+    margin-left: 60.6666666667%;
+  }
+  .p-offset-by-eight.column,
+.p-offset-by-eight.columns {
+    margin-left: 69.3333333333%;
+  }
+  .p-offset-by-nine.column,
+.p-offset-by-nine.columns {
+    margin-left: 78%;
+  }
+  .p-offset-by-ten.column,
+.p-offset-by-ten.columns {
+    margin-left: 86.6666666667%;
+  }
+  .p-offset-by-eleven.column,
+.p-offset-by-eleven.columns {
+    margin-left: 95.3333333333%;
+  }
+  .p-offset-by-one-third.column,
+.p-offset-by-one-third.columns {
+    margin-left: 34.6666666667%;
+  }
+  .p-offset-by-two-thirds.column,
+.p-offset-by-two-thirds.columns {
+    margin-left: 69.3333333333%;
+  }
+  .p-offset-by-one-half.column,
+.p-offset-by-one-half.columns {
+    margin-left: 52%;
+  }
+}
 /* Larger than phablet (also point when grid becomes active) */
 /* Larger than tablet */
 /* Larger than desktop */
-/* Larger than Desktop HD *//*# sourceMappingURL=componentes.css.map */
+/* Larger than Desktop HD */
+@font-face {
+  font-family: "Fpop";
+  src: url("./assets/fuentes/Poppins-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ftit";
+  src: url("./assets/fuentes/TitilliumWeb-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: rgb(247, 148, 67);
+}
+
+header {
+  background-color: rgb(45, 66, 99);
+  height: 101px;
+}
+header h1 {
+  font-family: "Ftit";
+  color: rgb(236, 219, 186);
+  text-align: center;
+}
+header .perfil,
+header .config {
+  width: 40px;
+  height: 40px;
+  margin: 20px;
+  float: right;
+}
+
+main section.menu {
+  height: 550px;
+  background-color: rgb(236, 219, 186);
+}
+main section.menu ul {
+  list-style: none;
+  text-align: center;
+  margin-top: 60px;
+  color: rgb(45, 66, 99);
+}
+main section.menu ul li {
+  border: 1px solid rgb(25, 25, 25);
+  border-radius: 10px;
+  margin: 10px;
+}
+main section.menu ul li:hover {
+  background-color: rgb(247, 148, 67);
+}
+main section.interior {
+  height: 550px;
+}
+main section.interior .panel {
+  padding: 1em;
+  background-color: rgb(236, 219, 186);
+  border: 1px solid rgb(247, 148, 67);
+  border-radius: 10px;
+  max-height: 440px;
+  overflow: auto;
+}
+main section.interior .panel #Panel1,
+main section.interior .panel #Panel2,
+main section.interior .panel #Panel3 {
+  height: 30px;
+}
+main section.interior .panel h4 {
+  font-family: Ftit;
+  text-align: center;
+}
+main section.interior .tablero {
+  background-color: rgb(247, 148, 67);
+  min-height: 440px;
+  padding: 1em;
+}
+main section.interior .tarjeta {
+  background-color: rgb(45, 66, 99);
+  color: white;
+  padding: 1em;
+  border: 1px solid rgb(25, 25, 25);
+  margin-top: 1em;
+  border-radius: 10px;
+}
+main section.interior .modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main section.interior .modal div.contenido {
+  width: 40vw;
+  height: 70vh;
+  background-color: rgb(236, 219, 186);
+  border-radius: 10px;
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  overflow: auto;
+  padding: 1em;
+}
+main section.interior .modal div.contenido div.generarTarea h3 {
+  font-family: Ftit;
+  background-color: rgb(247, 148, 67);
+  color: rgb(45, 66, 99);
+  text-align: center;
+  border-radius: 10px;
+}
+main section.interior .modal div.contenido div.generarTarea input {
+  margin-top: 10px;
+}
+main section.interior .modal div.contenido div.etiqueta {
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+main section.interior .modal div.ulSub input {
+  margin-left: 20px;
+}
+main section.interior .modal .barraProgreso {
+  border: 1px solid rgb(25, 25, 25);
+  display: block;
+  border-radius: 5px;
+  width: 80%;
+  margin-bottom: 30px;
+}
+main section.interior .modal .barraProgreso div.barra {
+  display: block;
+  height: 1em;
+  width: 0%;
+  border-radius: 5px;
+  background-color: rgb(45, 66, 99);
+}
+main section.interior .dot {
+  height: 12px;
+  width: 12px;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+}
+main section.interior .desaparecer {
+  display: none;
+}
+main section.interior .aparecer {
+  display: block;
+}
+
+footer {
+  min-height: 101px;
+  background-color: rgb(45, 66, 99);
+}
+footer p {
+  margin: 15px;
+  color: rgb(236, 219, 186);
+  text-align: right;
+}
+footer div.acordeon div {
+  display: block;
+  width: 100%;
+}
+footer div.acordeon div h3 {
+  font: 10pt Arial;
+  width: 100%;
+  padding-left: 1em;
+  background: rgb(236, 219, 186);
+  height: 3em;
+  text-transform: uppercase;
+  line-height: 3em;
+  color: rgb(247, 148, 67);
+  margin: 0;
+}
+footer div.acordeon div h3:hover {
+  background-color: rgb(25, 25, 25);
+}
+footer div.acordeon div h3 span {
+  float: right;
+  padding-right: 2em;
+}
+footer div.acordeon div article {
+  background-color: rgb(236, 219, 186);
+  color: rgb(25, 25, 25);
+  border: 2px solid rgb(25, 25, 25);
+  display: none;
+}/*# sourceMappingURL=styles.css.map */

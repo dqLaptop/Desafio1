@@ -1,0 +1,204 @@
+@use "sass:map";
+@import './css/components.scss';
+
+@font-face {
+    font-family: "Fpop";
+    src: url("./assets/fuentes/Poppins-Light.ttf");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "Ftit";
+    src: url("./assets/fuentes/TitilliumWeb-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$temaOscuro: (
+    "fuente":Fpop,
+    "fuenteTitulo":Ftit,
+    "colorPrimario":rgb(25, 25, 25),
+    "colorSecundario":rgb(45, 66, 99),
+    "colorTerciario":rgb(247, 148, 67),
+    "colorCuadruple":rgb(236, 219, 186),
+);
+
+body {
+    background-color: map.get($temaOscuro, "colorTerciario");
+}
+
+header {
+    background-color: map.get($temaOscuro, "colorSecundario");
+    height: 101px;
+
+    h1 {
+        font-family: "Ftit";
+        color: map.get($temaOscuro, "colorCuadruple");
+        text-align: center;
+    }
+    .perfil,
+    .config {
+      width: 40px;
+      height: 40px;
+      margin: 20px;
+      float: right;
+    }
+
+}
+
+main {
+
+    section.menu {
+        height: 550px;
+        background-color: map.get($temaOscuro, "colorCuadruple");
+
+        ul {
+            list-style: none;
+            text-align: center;
+            margin-top: 60px;
+            color: map.get($temaOscuro, "colorSecundario");
+
+            li {
+                border: 1px solid map.get($temaOscuro, "colorPrimario");
+                border-radius: 10px;
+                margin: 10px;
+            }
+
+            li:hover {
+                background-color: map.get($temaOscuro, "colorTerciario");
+                ;
+            }
+        }
+    }
+
+    section.interior {
+        height: 550px;
+
+        .panel {
+            padding: 1em;
+            background-color: map.get($temaOscuro, "colorCuadruple");
+            border: 1px solid map.get($temaOscuro, "colorTerciario");
+            border-radius: 10px;
+            max-height: 440px;
+            overflow: auto;
+
+            #Panel1,
+            #Panel2,
+            #Panel3 {
+                height: 30px;
+            }
+
+            h4 {
+                font-family: map.get($temaOscuro, "fuenteTitulo");
+                text-align: center;
+            }
+        }
+
+        .tablero {
+            background-color: map.get($temaOscuro, "colorTerciario");
+            min-height: 440px;
+            padding: 1em;
+        }
+
+        .tarjeta {
+            background-color: map.get($temaOscuro, "colorSecundario");
+            color: white;
+            padding: 1em;
+            border: 1px solid map.get($temaOscuro, "colorPrimario");
+            margin-top: 1em;
+            border-radius: 10px;
+        }
+
+        .modal {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            div.contenido {
+                width: 40vw;
+                height: 70vh;
+                background-color: map.get($temaOscuro, "colorCuadruple");
+                border-radius: 10px;
+                position: absolute;
+                left: 30%;
+                top: 10%;
+                overflow: auto;
+                padding: 1em;
+
+                div.generarTarea h3 {
+                    font-family: map.get($temaOscuro, "fuenteTitulo");
+                    background-color: map.get($temaOscuro, "colorTerciario");
+                    color: map.get($temaOscuro, "colorSecundario");
+                    text-align: center;
+                    border-radius: 10px;
+                }
+
+                div.generarTarea input {
+                    margin-top: 10px;
+                }
+
+                div.etiqueta {
+                    display: inline-block;
+                    margin-top: 15px;
+                    margin-bottom: 35px;
+                }
+            }
+
+            div.ulSub input {
+                margin-left: 20px;
+            }
+
+            .barraProgreso {
+                border: 1px solid map.get($temaOscuro, "colorPrimario");
+                display: block;
+                border-radius: 5px;
+                width: 80%;
+                margin-bottom: 30px;
+
+                div.barra {
+                    display: block;
+                    height: 1em;
+                    width: 0%;
+                    border-radius: 5px;
+                    background-color: map.get($temaOscuro, "colorSecundario");
+                }
+            }
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            background-color: blue;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .desaparecer {
+            display: none;
+        }
+
+        .aparecer {
+            display: block;
+        }
+    }
+}
+
+footer {
+    min-height: 101px;
+    background-color: map.get($temaOscuro, "colorSecundario");
+
+    p {
+        margin: 15px;
+        color: map.get($temaOscuro, "colorCuadruple");
+        text-align: right;
+    }
+
+
+    @include acordeon($temaOscuro);
+}
