@@ -1,5 +1,5 @@
 
-import { crearTareaHtml, crearSubHtml, functioncheck, obtenerValorRadio} from './index';
+import { crearTareaHtml, crearSubHtml, functioncheck, obtenerValorRadio, functionEditClick, functionEliminar } from './index';
 import { PanelHecho, PanelPendiente, PanelProgreso } from "../index";
 import { Tarea, Subtarea, ListaSubtarea } from "../Classes/index";
 
@@ -19,6 +19,8 @@ export const bp = document.querySelector('.bp');
 export const contenedores = document.querySelectorAll('.contenedor');
 export var ls = new ListaSubtarea();
 export var botonPulsado = '';
+let tareaD = "";
+let p = "";
 
 
 document.querySelector('#cambio').addEventListener('click', function () {
@@ -92,6 +94,46 @@ addSub.addEventListener('click', function () {
     subT.classList.add('aparecer');
 });
 
+const functionDragStar = (e) => {
+    e.stopPropagation();
+    e.dataTransfer.setData("text", e.target.id);
+    tareaD = e.target.id;
+}
+contenedores.forEach(contenedor => {
+    contenedor.addEventListener('dragover', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (e.target.id === 'Panel1') {
+            let encontrado = PanelPendiente.buscarTarea(tareaD);
+            if (encontrado === true) {
+                p = 'Panel1';
+            }
+        } else {
+            if (e.target.id === 'Panel2') {
+                let encontrado = PanelProgreso.buscarTarea(tareaD);
+                if (encontrado === true) {
+                    p = 'Panel2';
+                }
+            } else {
+                let encontrado = PanelHecho.buscarTarea(tareaD);
+                if (encontrado === true) {
+                    p = 'Panel3';
+                }
+            }
+        }
+    })
+});
+
+contenedores.forEach(contenedor => {
+    contenedor.addEventListener('drop', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        let data = e.dataTransfer.getData("text");
+        e.currentTarget.append(document.getElementById(data));
+        (e.currentTarget.id === 'Panel1') ? PanelPendiente.AddTarea(tareaD) : (e.currentTarget.id === 'Panel2') ? PanelProgreso.AddTarea(tareaD) : PanelHecho.AddTarea(tareaD);
+        (p === 'Panel1') ? PanelPendiente.borrarTarea(tareaD) : (p === 'Panel2') ? PanelProgreso.borrarTarea(tareaD) : PanelHecho.borrarTarea(tareaD);
+    })
+});
 
 subT.addEventListener('keyup', (event) => {
     if (event.keyCode === 13 && subT.value.length > 0) {

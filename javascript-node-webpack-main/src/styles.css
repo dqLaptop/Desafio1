@@ -1366,6 +1366,18 @@ body.temaOscuro div.interior .tarjeta {
   margin-top: 1em;
   border-radius: 10px;
 }
+body.temaOscuro div.interior .tarjeta .delete {
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+  float: right;
+}
+body.temaOscuro div.interior .tarjeta .edit {
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+  float: left;
+}
 body.temaOscuro div.interior .modal {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
@@ -1420,9 +1432,17 @@ body.temaOscuro div.interior .modal .barraProgreso div.barra {
 body.temaOscuro div.interior .dot {
   height: 12px;
   width: 12px;
-  background-color: blue;
   border-radius: 50%;
   display: inline-block;
+}
+body.temaOscuro div.interior .Alta {
+  background-color: red;
+}
+body.temaOscuro div.interior .Baja {
+  background-color: green;
+}
+body.temaOscuro div.interior .Media {
+  background-color: yellow;
 }
 body.temaOscuro div.interior .desaparecer {
   display: none;
@@ -1554,6 +1574,18 @@ body.temaClaro div.interior .tarjeta {
   margin-top: 1em;
   border-radius: 10px;
 }
+body.temaClaro div.interior .tarjeta .delete {
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+  float: right;
+}
+body.temaClaro div.interior .tarjeta .edit {
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+  float: left;
+}
 body.temaClaro div.interior .modal {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
@@ -1608,9 +1640,17 @@ body.temaClaro div.interior .modal .barraProgreso div.barra {
 body.temaClaro div.interior .dot {
   height: 12px;
   width: 12px;
-  background-color: blue;
   border-radius: 50%;
   display: inline-block;
+}
+body.temaClaro div.interior span.Alta {
+  background-color: red;
+}
+body.temaClaro div.interior span.Baja {
+  background-color: green;
+}
+body.temaClaro div.interior span.Media {
+  background-color: yellow;
 }
 body.temaClaro div.interior .desaparecer {
   display: none;

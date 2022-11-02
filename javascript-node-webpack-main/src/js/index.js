@@ -1,4 +1,4 @@
-import { crearTareaHtml, crearSubHtml, functioncheck, obtenerValorRadio,} from './funciones';
+import { crearTareaHtml, crearSubHtml, functioncheck, obtenerValorRadio, functionEditClick, functionEliminar } from './funciones';
 import {
     modal,
     buttonAceptar,
@@ -16,7 +16,7 @@ import {
     botonPulsado
 } from './componentes';
 export {
-    crearTareaHtml, crearSubHtml, functioncheck, obtenerValorRadio,
+    crearTareaHtml, crearSubHtml, functioncheck, obtenerValorRadio, functionEditClick, functionEliminar,
     modal,
     buttonAceptar,
     buttonModificar,
