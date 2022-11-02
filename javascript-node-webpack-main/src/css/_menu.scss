@@ -30,3 +30,36 @@
         }
     }
 }
+@mixin pestanias ($tema) {
+        
+    ul{
+        list-style: none;
+        display: flow-root;
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    ul>li{
+        border-radius: 10px 10px 0px 0px;
+        float: left;
+        padding: 1em;
+        background-color: map.get($tema, "colorCuadruple");
+        margin:0;
+        margin-left: 1em;
+    }
+    ul>li:active{
+        
+        background-color: map.get($tema, "colorTerciario");
+        border-bottom: 0px;
+    }
+    ul>li>a{
+        text-decoration: none;
+    }
+
+    ul+div{
+        background-color: map.get($tema, "colorTerciario");
+        height:440px;
+        position: relative;
+        padding-top:1em ;
+    }
+}

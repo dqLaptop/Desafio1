@@ -71,10 +71,11 @@ body.temaOscuro {
       float: right;
     }
   }
+
   .menuHam {
     width: 25px;
     height: 25px;
-    margin:0;
+    margin: 0;
     margin: 20px;
   }
 
@@ -176,9 +177,25 @@ body.temaOscuro {
     .dot {
       height: 12px;
       width: 12px;
-      background-color: blue;
       border-radius: 50%;
       display: inline-block;
+    }
+    .Alta {
+      background-color: red;
+    }
+
+    .Media {
+      background-color: yellow;
+    }
+
+    .Baja {
+      background-color: green;
+    }
+    .edit,.delete{
+      width: 25px;
+      height: 25px;
+      margin: 20px;
+      float: right;
     }
 
     .desaparecer {
@@ -203,4 +220,186 @@ body.temaOscuro {
 
   @include menuBotones($temaOscuro);
   @include botones($temaOscuro);
+}
+
+//----------------------------------------------------------Tema Claro--------------------------------------------------------
+body.temaClaro {
+  font-family: map.get($temaClaro, "fuente");
+
+  header {
+    background-color: map.get($temaClaro, "colorSecundario");
+    min-height: 101px;
+
+    h2 {
+      font-family: map.get($temaClaro, "fuenteTitulo");
+      color: map.get($temaClaro, "colorCuadruple");
+      text-align: center;
+      padding-left: 25px;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      margin-left: 40px;
+      margin-top: 20px;
+    }
+
+    .perfil,
+    .config {
+      width: 25px;
+      height: 25px;
+      margin: 20px;
+      float: right;
+    }
+  }
+
+  .menuHam {
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    margin: 20px;
+  }
+
+  div.interior {
+    .panel {
+      padding: 1em;
+      background-color: map.get($temaClaro, "colorCuadruple");
+      border: 1px solid map.get($temaClaro, "colorTerciario");
+      border-radius: 10px;
+      max-height: 440px;
+      overflow: auto;
+
+      #Panel1,
+      #Panel2,
+      #Panel3 {
+        height: 30px;
+      }
+
+      h4 {
+        font-family: map.get($temaClaro, "fuenteTitulo");
+        text-align: center;
+      }
+    }
+
+    .tablero {
+      background-color: map.get($temaClaro, "colorTerciario");
+      min-height: 440px;
+      padding: 1em;
+    }
+
+    .tarjeta {
+      background-color: map.get($temaClaro, "colorSecundario");
+      color: white;
+      padding: 1em;
+      border: 1px solid map.get($temaClaro, "colorPrimario");
+      margin-top: 1em;
+      border-radius: 10px;
+    }
+
+    .modal {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      div.contenido {
+        width: 40vw;
+        height: 70vh;
+        background-color: map.get($temaClaro, "colorCuadruple");
+        border-radius: 10px;
+        position: absolute;
+        left: 30%;
+        top: 10%;
+        overflow: auto;
+        padding: 1em;
+
+        div.generarTarea h3 {
+          font-family: map.get($temaClaro, "fuenteTitulo");
+          background-color: map.get($temaClaro, "colorTerciario");
+          color: map.get($temaOscuro, "colorSecundario");
+          text-align: center;
+          border-radius: 10px;
+        }
+
+        div.generarTarea input {
+          margin-top: 10px;
+        }
+
+        div.etiqueta {
+          display: inline-block;
+          margin-top: 15px;
+          margin-bottom: 35px;
+        }
+      }
+
+      div.ulSub input {
+        margin-left: 20px;
+      }
+
+      .barraProgreso {
+        border: 1px solid map.get($temaClaro, "colorPrimario");
+        display: block;
+        border-radius: 5px;
+        width: 80%;
+        margin-bottom: 30px;
+
+        div.barra {
+          display: block;
+          height: 1em;
+          width: 0%;
+          border-radius: 5px;
+          background-color: map.get($temaClaro, "colorSecundario");
+        }
+      }
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .Alta {
+      background-color: red;
+    }
+
+    .Media {
+      background-color: yellow;
+    }
+
+    .Baja {
+      background-color: green;
+    }
+    .edit,.delete{
+      width: 25px;
+      height: 25px;
+      margin: 20px;
+      float: right;
+    }
+
+    .desaparecer {
+      display: none;
+    }
+
+    .aparecer {
+      display: block;
+    }
+  }
+
+  footer {
+    height: 101px;
+    background-color: map.get($temaClaro, "colorSecundario");
+
+    p {
+      margin: 15px;
+      color: map.get($temaClaro, "colorCuadruple");
+      text-align: right;
+    }
+  }
+
+  @include pestanias($temaClaro);
+  @include botonesClaro($temaClaro);
 }
