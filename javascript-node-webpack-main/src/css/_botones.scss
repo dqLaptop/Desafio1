@@ -31,3 +31,38 @@
         margin-top: 50px;
     }
 }
+@mixin botonesClaro($tema) {
+    #cambio {
+        color: map.get($tema, "colorPrimario");
+        background-color: map.get($tema, "colorTerciario");
+        margin-top: 20px;
+        overflow: hidden;
+        float: left;
+    }
+
+    #cambio:hover {
+        color: map.get($tema, "colorTerciario");
+        background-color: map.get($tema, "colorPrimario");
+    }
+
+    div button {
+        color: map.get($tema, "colorTerciario");
+        background-color: map.get($tema, "colorSecundario");
+        overflow: hidden;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    div button:hover {
+        color: map.get($tema, "colorTerciario");
+        background-color: map.get($tema, "colorPrimario");
+    }
+
+    #modificar,
+    #addSub,
+    #deleteSub,
+    #aceptar,
+    #cancelar {
+        margin-top: 50px;
+    }
+}

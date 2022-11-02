@@ -1060,9 +1060,23 @@ body.temaOscuro div.interior .modal .barraProgreso div.barra {
 body.temaOscuro div.interior .dot {
   height: 12px;
   width: 12px;
-  background-color: blue;
   border-radius: 50%;
   display: inline-block;
+}
+body.temaOscuro div.interior .Alta {
+  background-color: red;
+}
+body.temaOscuro div.interior .Media {
+  background-color: yellow;
+}
+body.temaOscuro div.interior .Baja {
+  background-color: green;
+}
+body.temaOscuro div.interior .edit, body.temaOscuro div.interior .delete {
+  width: 25px;
+  height: 25px;
+  margin: 20px;
+  float: right;
 }
 body.temaOscuro div.interior .desaparecer {
   display: none;
@@ -1129,5 +1143,211 @@ body.temaOscuro #addSub,
 body.temaOscuro #deleteSub,
 body.temaOscuro #aceptar,
 body.temaOscuro #cancelar {
+  margin-top: 50px;
+}
+
+body.temaClaro {
+  font-family: Fmon;
+}
+body.temaClaro header {
+  background-color: #AEDADD;
+  min-height: 101px;
+}
+body.temaClaro header h2 {
+  font-family: Ftit;
+  color: #6E7DA2;
+  text-align: center;
+  padding-left: 25px;
+}
+body.temaClaro header .logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+body.temaClaro header .perfil,
+body.temaClaro header .config {
+  width: 25px;
+  height: 25px;
+  margin: 20px;
+  float: right;
+}
+body.temaClaro .menuHam {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  margin: 20px;
+}
+body.temaClaro div.interior .panel {
+  padding: 1em;
+  background-color: #6E7DA2;
+  border: 1px solid #DB996C;
+  border-radius: 10px;
+  max-height: 440px;
+  overflow: auto;
+}
+body.temaClaro div.interior .panel #Panel1,
+body.temaClaro div.interior .panel #Panel2,
+body.temaClaro div.interior .panel #Panel3 {
+  height: 30px;
+}
+body.temaClaro div.interior .panel h4 {
+  font-family: Ftit;
+  text-align: center;
+}
+body.temaClaro div.interior .tablero {
+  background-color: #DB996C;
+  min-height: 440px;
+  padding: 1em;
+}
+body.temaClaro div.interior .tarjeta {
+  background-color: #AEDADD;
+  color: white;
+  padding: 1em;
+  border: 1px solid #FCF8F3;
+  margin-top: 1em;
+  border-radius: 10px;
+}
+body.temaClaro div.interior .modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body.temaClaro div.interior .modal div.contenido {
+  width: 40vw;
+  height: 70vh;
+  background-color: #6E7DA2;
+  border-radius: 10px;
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  overflow: auto;
+  padding: 1em;
+}
+body.temaClaro div.interior .modal div.contenido div.generarTarea h3 {
+  font-family: Ftit;
+  background-color: #DB996C;
+  color: rgb(45, 66, 99);
+  text-align: center;
+  border-radius: 10px;
+}
+body.temaClaro div.interior .modal div.contenido div.generarTarea input {
+  margin-top: 10px;
+}
+body.temaClaro div.interior .modal div.contenido div.etiqueta {
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+body.temaClaro div.interior .modal div.ulSub input {
+  margin-left: 20px;
+}
+body.temaClaro div.interior .modal .barraProgreso {
+  border: 1px solid #FCF8F3;
+  display: block;
+  border-radius: 5px;
+  width: 80%;
+  margin-bottom: 30px;
+}
+body.temaClaro div.interior .modal .barraProgreso div.barra {
+  display: block;
+  height: 1em;
+  width: 0%;
+  border-radius: 5px;
+  background-color: #AEDADD;
+}
+body.temaClaro div.interior .dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+body.temaClaro div.interior .Alta {
+  background-color: red;
+}
+body.temaClaro div.interior .Media {
+  background-color: yellow;
+}
+body.temaClaro div.interior .Baja {
+  background-color: green;
+}
+body.temaClaro div.interior .edit, body.temaClaro div.interior .delete {
+  width: 25px;
+  height: 25px;
+  margin: 20px;
+  float: right;
+}
+body.temaClaro div.interior .desaparecer {
+  display: none;
+}
+body.temaClaro div.interior .aparecer {
+  display: block;
+}
+body.temaClaro footer {
+  height: 101px;
+  background-color: #AEDADD;
+}
+body.temaClaro footer p {
+  margin: 15px;
+  color: #6E7DA2;
+  text-align: right;
+}
+body.temaClaro ul {
+  list-style: none;
+  display: flow-root;
+  margin: 0;
+  margin-top: 15px;
+}
+body.temaClaro ul > li {
+  border-radius: 10px 10px 0px 0px;
+  float: left;
+  padding: 1em;
+  background-color: #6E7DA2;
+  margin: 0;
+  margin-left: 1em;
+}
+body.temaClaro ul > li:active {
+  background-color: #DB996C;
+  border-bottom: 0px;
+}
+body.temaClaro ul > li > a {
+  text-decoration: none;
+}
+body.temaClaro ul + div {
+  background-color: #DB996C;
+  height: 440px;
+  position: relative;
+  padding-top: 1em;
+}
+body.temaClaro #cambio {
+  color: #FCF8F3;
+  background-color: #DB996C;
+  margin-top: 20px;
+  overflow: hidden;
+  float: left;
+}
+body.temaClaro #cambio:hover {
+  color: #DB996C;
+  background-color: #FCF8F3;
+}
+body.temaClaro div button {
+  color: #DB996C;
+  background-color: #AEDADD;
+  overflow: hidden;
+  margin-top: 10px;
+  text-align: center;
+}
+body.temaClaro div button:hover {
+  color: #DB996C;
+  background-color: #FCF8F3;
+}
+body.temaClaro #modificar,
+body.temaClaro #addSub,
+body.temaClaro #deleteSub,
+body.temaClaro #aceptar,
+body.temaClaro #cancelar {
   margin-top: 50px;
 }/*# sourceMappingURL=styles.css.map */
