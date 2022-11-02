@@ -8,12 +8,24 @@ export class Panel {
 
     }
     AddTarea(tarea) {
-        if(this.tareas===undefined){
-            this.tareas=[tarea];
-        }else{
+        if (this.tareas === undefined) {
+            this.tareas = [tarea];
+        } else {
             this.tareas.push(tarea);
         }
-    this.guardarLocalStorage();
+        this.guardarLocalStorage();
+    }
+    buscarTarea(id) {
+        let incluida = false;
+        let tar = this.tareas.filter(tarea => tarea.id == id);
+        if (tar.length > 0) {
+            incluida = true;
+        }
+        return incluida;
+    }
+    buscarTarea2(id) {
+        let tar = this.tareas.filter(tarea => tarea.id == id);
+        return tar[0];
     }
     borrarTarea(id) {
         let tarea = this.tareas.filter(element => element.id == id);
@@ -37,7 +49,7 @@ export class Panel {
         this.tareas = (localStorage.getItem(this.cod))
             ? JSON.parse(localStorage.getItem(this.cod))
             : [];
-            this.tareas = this.tareas.map(Tarea.fromJSON);
-        
+        this.tareas = this.tareas.map(Tarea.fromJSON);
+
     }
 }

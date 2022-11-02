@@ -71,10 +71,11 @@ body.temaOscuro {
       float: right;
     }
   }
+
   .menuHam {
     width: 25px;
     height: 25px;
-    margin:0;
+    margin: 0;
     margin: 20px;
   }
 
@@ -112,6 +113,18 @@ body.temaOscuro {
       border: 1px solid map.get($temaOscuro, "colorPrimario");
       margin-top: 1em;
       border-radius: 10px;
+      .delete {
+        width: 20px;
+        height: 20px;
+        margin: 20px;
+        float: right;
+      }
+      .edit{
+        width: 20px;
+        height: 20px;
+        margin: 20px;
+        float: left;
+      }
     }
 
     .modal {
@@ -176,9 +189,20 @@ body.temaOscuro {
     .dot {
       height: 12px;
       width: 12px;
-      background-color: blue;
       border-radius: 50%;
       display: inline-block;
+    }
+
+    .Alta {
+      background-color: red;
+    }
+
+    .Baja {
+      background-color: green;
+    }
+
+    .Media {
+      background-color: yellow;
     }
 
     .desaparecer {
@@ -239,7 +263,7 @@ body.temaClaro {
   .menuHam {
     width: 25px;
     height: 25px;
-    margin:0;
+    margin: 0;
     margin: 20px;
   }
 
@@ -277,6 +301,21 @@ body.temaClaro {
       border: 1px solid map.get($temaClaro, "colorPrimario");
       margin-top: 1em;
       border-radius: 10px;
+
+      
+      .delete {
+        width: 20px;
+        height: 20px;
+        margin: 20px;
+        float: right;
+      }
+      .edit{
+        width: 20px;
+        height: 20px;
+        margin: 20px;
+        float: left;
+      }
+
     }
 
     .modal {
@@ -341,9 +380,21 @@ body.temaClaro {
     .dot {
       height: 12px;
       width: 12px;
-      background-color: blue;
       border-radius: 50%;
       display: inline-block;
+
+    }
+
+    span.Alta {
+      background-color: red;
+    }
+
+    span.Baja {
+      background-color: green;
+    }
+
+    span.Media {
+      background-color: yellow;
     }
 
     .desaparecer {
