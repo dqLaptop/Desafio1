@@ -1,7 +1,12 @@
 import { Tarea } from './Tarea.class';
-import { ListaTarea } from './ListaTarea.class';
+
+import { Subtarea } from './Subtarea.class';
+import { ListaSubtarea } from './ListaSubtarea.class';
+import { Panel } from './Panel.class';
 
 export {
-    ListaTarea,
-    Tarea
+    Tarea,
+    Subtarea,
+    ListaSubtarea,
+    Panel
 }

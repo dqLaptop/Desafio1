@@ -21,14 +21,10 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
-                exclude: /styles.css$/,
-                use: ['style-loader', 'css-loader']
+                test: /\.(c|sc|sa)ss$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
-            {
-                test: /styles.css$/,
-                use: [ MiniCssExtractPlugin.loader, 'css-loader']
-            },
+
             {
                 test: /\.(png|jpe?g|gif)$/,
                 loader: 'file-loader'
@@ -37,10 +33,10 @@ module.exports = {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
                 use: {
-                  loader: "babel-loader",
-                  options: {
-                    presets: ['@babel/preset-env']
-                  }
+                    loader: "babel-loader",
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
                 }
             }
         ]

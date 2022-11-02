@@ -17,18 +17,14 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
-                exclude: /styles.css$/,
-                use: ['style-loader', 'css-loader']
-            },
-            {
-                test: /styles.css$/,
-                use: [ MiniCssExtractPlugin.loader, 'css-loader']
+                test: /\.(c|sc|sa)ss$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(png|jpe?g|gif)$/,
                 loader: 'file-loader'
             }
+
         ]
     },
     optimization: {},
@@ -44,7 +40,7 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
-                {from: 'src/assets/', to: 'assets/'}
+                { from: 'src/assets/', to: 'assets/' }
             ]
         })
     ]

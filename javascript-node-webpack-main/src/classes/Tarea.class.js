@@ -1,12 +1,11 @@
-
 export class Tarea {
-    constructor(tarea, etiqueta) {
+    constructor(tarea, prioridad, img, sub, completada) {
         this.tarea = tarea;
-        this.etiqueta = etiqueta;
-        this.cod = new Date().getTime();
-        this.completada = false;
-        this.img = null;
-        this.subtareas = [];
+        this.prioridad = prioridad;
+        this.cod = 'T' + new Date().getTime();
+        this.completada = completada;
+        this.img = img;
+        this.subtareas = sub;
     }
 
-}
+} 
