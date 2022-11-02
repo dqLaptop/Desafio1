@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+
+<body>
+    <header class="row">
+        <img src="" class="columns p-two logo">
+        <h1 class="columns p-seven">Nota nomada</h1>
+        <img class="columns p-one perfil" src="./assets/iconos/person_FILL0_wght400_GRAD0_opsz48.svg">
+        <img class="columns p-one config" src="./assets/iconos/settings_FILL0_wght400_GRAD0_opsz48.svg">
+    </header>
+    <main class="row">
+        <section class="two columns menu">
+            <div class="row">
+                <ul class="twelve columns">
+                    <li>Inicio</li>
+                    <li>Tareas</li>
+                    <li>Ayuda</li>
+                    <li>Contacto</li>
+                </ul>
+            </div>
+        </section>
+        <section class="ten columns interior">
+            <div class="row pagina">
+                <div class="twelve columns">
+                    <div class="row tablero">
+                        <div class="four columns panel ">
+                            <div class="row">
+                                <div class="twelve columns titulo">Primer panel</div>
+                            </div>
+                            <div class="row Pendiente contenedor"></div>
+                            <div class="row">
+                                <div class="twelve columns add"><button id="P1" class="addTarjeta">+</button></div>
+                            </div>
+                        </div>
+                        <div class="four columns panel">
+                            <div class="row">
+                                <div class="twelve columns titulo">Segundo panel</div>
+                                <div class="row progreso contenedor"></div>
+                            </div>
+                            <div class="row">
+                                <div class="twelve columns add"><button id="P2" class="addTarjeta">+</button></div>
+                            </div>
+                        </div>
+                        <div class="four columns panel">
+                            <div class="row ">
+                                <div class="twelve columns titulo">Tecer panel</div>
+                                <div class="row hecho contenedor">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="twelve columns add"><button id="P3" class="addTarjeta">+</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal desaparecer">
+                    <div class="contenido">
+                        <div class="row Pendiente">
+                            <div class="columns twelve">
+                                <div class="row">
+                                    <h3 class="columns twelve">Generando Tarea</h3>
+                                    <label for="addNomT" class="columns twelve">Nombre de la tarea</label>
+                                    <input type="text" autofocus id="addNomT" class="columns twelve">
+                                    <label for="addNomT" class="columns twelve">Imagen (opcional)</label>
+                                    <input type="url" id="foto" class="columns twelve">
+                                </div>
+                            </div>
+                            <p class="columns twelve">Elige la prioridad de la tarea:</p>
+                            <label for="PrioridadA" class="columns one">Alta</label>
+                            <input type="radio" id="PrioridadA" name="p" class="columns two radio">
+                            <label for="PrioridadM" class="columns one">Media</label>
+                            <input type="radio" id="PrioridadM" name="p" class="columns two radio">
+                            <label for="PrioridadB" class="columns one">Baja</label>
+                            <input type="radio" id="PrioridadB" name="p" class="columns two radio">
+                            <p class="columns twelve">Subtareas (opcional)</p>
+                            <label class="bp two columns ">0%</label>
+                            <div class="barraProgreso ten columns">
+                                <div class="row">
+                                    <div class="barra columns ten"></div>
+                                </div>
+                            </div>
+                            <div class="columns twelve sub">
+                                <div class="row">
+                                    <div class="columns twelve ulSub">
+                                        <div class="row">
+                                            <input type="text" id="subT" class="columns five desaparecer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button class="columns five" id="addSub">Añadir subtarea</button>
+                            </div>
+                            <div class="row">
+                                <button class="columns five" id="aceptar">Aceptar</button>
+                                <button class="columns five" id="cancelar">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer class="row">
+        <div class="container">
+            <div class="row">
+                <div class="five columns">
+                    <div class="acordeon">
+                        <div>
+                            <h3 id="prueba">
+                                Ubicacion <span> + </span>
+                            </h3>
+                            <article>
+                                Calle falsa 123
+                            </article>
+                        </div>
+                        <div>
+                            <h3>
+                             Trabaja con nosotros<span> + </span>
+                            </h3>
+                            <article>
+                                Manda un correo a prueba@gmail.com
+                            </article>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
