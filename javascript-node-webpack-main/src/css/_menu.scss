@@ -1,0 +1,32 @@
+@mixin menuBotones($tema) {
+
+    ul {   
+        background-color: map.get($tema, "colorPrimario");
+        list-style: none;
+        text-align: center;
+        margin:0;
+        li {
+            display: inline-block;
+            border: 1px solid map.get($tema, "colorSecundario");
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+
+            a {
+                text-decoration: none;
+                color: map.get($tema, "colorTerciario");
+            }
+
+            a:hover,
+            :active {
+                text-decoration: none;
+                color: map.get($tema, "colorSecundario");
+            }
+        }
+
+        li:hover {
+            background-color: map.get($tema, "colorCuadruple");
+        }
+    }
+}

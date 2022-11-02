@@ -1,0 +1,206 @@
+@use "sass:map";
+@import './css/componentes.scss';
+
+@font-face {
+  font-family: "Fmon";
+  src: url("./assets/fuentes/Montserrat-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: "Fpop";
+  src: url("./assets/fuentes/Poppins-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: "Ftit";
+  src: url("./assets/fuentes/TitilliumWeb-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+$temaClaro: (
+  "fuente":Fmon,
+  "fuenteTitulo":Ftit,
+  "colorPrimario":#FCF8F3,
+  "colorSecundario":#AEDADD,
+  "colorTerciario":#DB996C,
+  "colorCuadruple":#6E7DA2,
+);
+$temaOscuro: (
+  "fuente":Fpop,
+  "fuenteTitulo":Ftit,
+  "colorPrimario":rgb(25, 25, 25),
+  "colorSecundario":rgb(45, 66, 99),
+  "colorTerciario":rgb(247, 148, 67),
+  "colorCuadruple":rgb(236, 219, 186),
+);
+
+body.temaOscuro {
+  font-family: map.get($temaOscuro, "fuente");
+
+  header {
+    background-color: map.get($temaOscuro, "colorSecundario");
+    min-height: 101px;
+
+    h2 {
+      font-family: map.get($temaOscuro, "fuenteTitulo");
+      color: map.get($temaOscuro, "colorCuadruple");
+      text-align: center;
+      padding-left: 25px;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      margin-left: 40px;
+      margin-top: 20px;
+    }
+
+    .perfil,
+    .config {
+      width: 25px;
+      height: 25px;
+      margin: 20px;
+      float: right;
+    }
+  }
+  .menuHam {
+    width: 25px;
+    height: 25px;
+    margin:0;
+    margin: 20px;
+  }
+
+  div.interior {
+    .panel {
+      padding: 1em;
+      background-color: map.get($temaOscuro, "colorCuadruple");
+      border: 1px solid map.get($temaOscuro, "colorTerciario");
+      border-radius: 10px;
+      max-height: 440px;
+      overflow: auto;
+
+      #Panel1,
+      #Panel2,
+      #Panel3 {
+        height: 30px;
+      }
+
+      h4 {
+        font-family: map.get($temaOscuro, "fuenteTitulo");
+        text-align: center;
+      }
+    }
+
+    .tablero {
+      background-color: map.get($temaOscuro, "colorTerciario");
+      min-height: 440px;
+      padding: 1em;
+    }
+
+    .tarjeta {
+      background-color: map.get($temaOscuro, "colorSecundario");
+      color: white;
+      padding: 1em;
+      border: 1px solid map.get($temaOscuro, "colorPrimario");
+      margin-top: 1em;
+      border-radius: 10px;
+    }
+
+    .modal {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      div.contenido {
+        width: 40vw;
+        height: 70vh;
+        background-color: map.get($temaOscuro, "colorCuadruple");
+        border-radius: 10px;
+        position: absolute;
+        left: 30%;
+        top: 10%;
+        overflow: auto;
+        padding: 1em;
+
+        div.generarTarea h3 {
+          font-family: map.get($temaOscuro, "fuenteTitulo");
+          background-color: map.get($temaOscuro, "colorTerciario");
+          color: map.get($temaOscuro, "colorSecundario");
+          text-align: center;
+          border-radius: 10px;
+        }
+
+        div.generarTarea input {
+          margin-top: 10px;
+        }
+
+        div.etiqueta {
+          display: inline-block;
+          margin-top: 15px;
+          margin-bottom: 35px;
+        }
+      }
+
+      div.ulSub input {
+        margin-left: 20px;
+      }
+
+      .barraProgreso {
+        border: 1px solid map.get($temaOscuro, "colorPrimario");
+        display: block;
+        border-radius: 5px;
+        width: 80%;
+        margin-bottom: 30px;
+
+        div.barra {
+          display: block;
+          height: 1em;
+          width: 0%;
+          border-radius: 5px;
+          background-color: map.get($temaOscuro, "colorSecundario");
+        }
+      }
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      background-color: blue;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .desaparecer {
+      display: none;
+    }
+
+    .aparecer {
+      display: block;
+    }
+  }
+
+  footer {
+    height: 101px;
+    background-color: map.get($temaOscuro, "colorSecundario");
+
+    p {
+      margin: 15px;
+      color: map.get($temaOscuro, "colorCuadruple");
+      text-align: right;
+    }
+  }
+
+  @include menuBotones($temaOscuro);
+  @include botones($temaOscuro);
+}
